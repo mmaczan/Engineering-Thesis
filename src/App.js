@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Home, Login, Register, Bmi, Bmr, Measurement,NewResult} from './pages';
 import { NavbarLoggedOut, NavbarLogged,} from './components';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import GlobalStyle from './globalStyles';
 import styled from 'styled-components';
+import Firebase from './components/Firebase/Firebase';
 
 const Backgraund = styled.div`
  background: linear-gradient(97.55deg, #FAE303 50%, rgba(255, 255, 253, 0.00729179) 50.83%, rgba(255, 255, 255, 0) 96.6%), #343434;
@@ -15,14 +16,17 @@ const Backgraund = styled.div`
 
 function App() {
   var tokken =true;
+  const [data, setData] = useState([]);
+
   return (
 
    <Router>
+     <Firebase setData={setData}/>
      <GlobalStyle/>
      <Backgraund>
       {tokken ? <NavbarLogged/> : <NavbarLoggedOut/>}
       <Switch>
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact render={(props) => (<Home data={data} {...props}/>)} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/bmi" component={Bmi} />

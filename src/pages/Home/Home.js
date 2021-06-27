@@ -2,13 +2,26 @@ import React from 'react'
 import { Main, MainContainer, P, H1, H2} from '../../globalStyles';
 import {HomeContainerRight,HomeContainerLeft, HomeTextCtn, HomeH1Span, HomeButtonCtn, HomeButton, RunnerImgCtn, ImgRunner} from './Home.element';
 import Runner from '../../Images/runner.png';
+import firebase from 'firebase';
 
 
+const Home = ({ data }) => {
+    console.log(data);
+    const updateUser = () => {
+        /// [1,3, 4]; push(5)
+        // const updatedData = data.slice(0) === ...data;
+        // updatedData.push(5);
+        const updatedData = [...data, { email: 'dupa787@wp.pl', status: 'anoreksja' }];
+        
+        // handler to set data;
+        //firebase.database().ref('users').set(updatedData);
+        //firebase.database().ref('users').child(0).child('status').set('grubas');
+    }
 
-const Home = () => {
     return (
         <MainContainer>
             <Main>
+                <button onClick={updateUser}>Add user</button>
                 <HomeContainerLeft>
                         <HomeTextCtn>
                             <H2>To jest Twoja</H2>

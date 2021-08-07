@@ -5,3 +5,4 @@ export {default as Bmi} from './BmiBmr/Bmi';
 export {default as Bmr} from './BmiBmr/Bmr';
 export {default as Measurement} from './Measurement/Measurement';
 export {default as NewResult} from './NewResult/NewResult';
+export {default as MyCalendar} from './MyCalendar/MyCalendar';

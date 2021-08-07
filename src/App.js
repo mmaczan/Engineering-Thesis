@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Login, Register, Bmi, Bmr, Measurement,NewResult} from './pages';
+import { Home, Login, Register, Bmi, Bmr, Measurement,NewResult, MyCalendar} from './pages';
 import { NavbarLoggedOut, NavbarLogged,} from './components';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import GlobalStyle from './globalStyles';
@@ -33,6 +33,7 @@ function App() {
       <Route path="/bmr" component={Bmr} />
       <Route path="/measurement" component={Measurement} />
       <Route path="/newresult" component={NewResult} />
+      <Route path="/myCalendar" component={MyCalendar} />
       </Switch>
      </Backgraund>
    </Router>

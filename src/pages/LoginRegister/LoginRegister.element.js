@@ -30,8 +30,13 @@ ${CtnBox}
 `;
 export const H3 = styled.h3`
     color: #FAE303;
-    width: 100px;
+    width: auto;
     margin: auto;
+`;
+export const PLink = styled(Link)`
+    color: #FAE303;
+    font-size: 12px;
+    
 `;
 export const InputLogReg = styled(Input)`
 @media screen and (max-width: 610px){

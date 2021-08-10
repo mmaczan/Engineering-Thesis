@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Login, Register, Bmi, Bmr, Measurement,NewResult, MyCalendar} from './pages';
+import { Home, Login, Register,ResetPassword,ForgotPassword, Bmi, Bmr, Measurement,NewResult, MyCalendar} from './pages';
 import { NavbarLoggedOut, NavbarLogged,} from './components';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import GlobalStyle from './globalStyles';
@@ -29,6 +29,8 @@ function App() {
       <Route path="/" exact render={(props) => (<Home data={data} {...props}/>)} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
+      <Route path="/forgotPassword" component={ForgotPassword} />
+      <Route path="/resetPassword" component={ResetPassword} />
       <Route path="/bmi" component={Bmi} />
       <Route path="/bmr" component={Bmr} />
       <Route path="/measurement" component={Measurement} />

@@ -1,28 +1,28 @@
-import React from 'react'
+import React, {useState, state,setState, useRef} from 'react'
 import { Main, MainContainer } from '../../globalStyles';
-import {MainContainerRight, MainContainerLeft,CtnLogReg, RunnerImgCtn,H3,InputLogReg,CtnBoxLogReg,BtnLogin,ImgRunner} from './LoginRegister.element';
+import {MainContainerRight, MainContainerLeft,CtnLogReg,H3, RunnerImgCtn,InputLogReg,CtnBoxLogReg,BtnLogin,ImgRunner} from './LoginRegister.element';
 import Runner from '../../Images/runner.png';
 
 
 
-const LoginRegister = () => {
+const ForgotPassword = () => {
+
+  
+
     return (
         <MainContainer>
             <Main>
                 <MainContainerLeft>
                         <CtnLogReg>
                             <CtnBoxLogReg>
-                                <H3>Rejestracja</H3>
+                                <H3>zapomniałes hasła?</H3>
                             </CtnBoxLogReg>
-                            <CtnBoxLogReg>
-                               <InputLogReg type="text" name="Login" placeholder="Login"/>
-                               <InputLogReg type="email" name="Login" placeholder="email"/>
-                               <InputLogReg type="password" name="hasło" placeholder="hasło"/>
-                               <InputLogReg type="password" name="hasło" placeholder="powtórz hasło"/>
+                            <CtnBoxLogReg >
+                               <InputLogReg type="email" name="email" placeholder="email" id="email"/>
                             </CtnBoxLogReg>
                             <CtnBoxLogReg>
                                 <BtnLogin>
-                                    Zarejestruj
+                                    wyslij
                                 </BtnLogin>
                             </CtnBoxLogReg>
                         </CtnLogReg>
@@ -38,4 +38,4 @@ const LoginRegister = () => {
     )
 }
 
-export default LoginRegister
+export default ForgotPassword
